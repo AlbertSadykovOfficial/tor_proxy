@@ -8,8 +8,5 @@ services:
     environment:
       - TZ:"EST5EDT"
     env_file:
-      - ./.settings
-    deploy:
-      mode: replicated
-      replicas: 4
+      - .settings
     restart: always
