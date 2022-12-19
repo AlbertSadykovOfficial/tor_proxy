@@ -1,0 +1,2 @@
+TOR_MaxCircuitDirtiness=1
+TOR_NewCircuitPeriod=15

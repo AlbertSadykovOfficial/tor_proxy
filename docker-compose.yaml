@@ -1,0 +1,15 @@
+version: "3"
+services:
+  proxy:
+    container_name: tor-proxy-server
+    image: dperson/torproxy
+    ports:
+      - 8118:8118
+    environment:
+      - TZ:"EST5EDT"
+    env_file:
+      - ./.settings
+    deploy:
+      mode: replicated
+      replicas: 4
+    restart: always
