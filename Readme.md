@@ -20,7 +20,7 @@ https://hub.docker.com/r/dperson/torproxy
 Создадим приложение (с переменными окружения) 
 Переменные окружения теперь не считываются с файла и их нужно передавать вручную:
 ```bash
-	env $(cat .env | xargs) docker stack deploy --compose-file docker-compose.yaml tor-proxy-manager
+	env $(cat .settings | xargs) docker stack deploy --compose-file docker-compose.yaml tor-proxy-manager
 ```
 
 Посмотреть контейнеры приложения:
