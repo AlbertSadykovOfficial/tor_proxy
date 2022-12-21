@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Pod
+metadata:
+  name: tor-proxy-server
+  labels:
+    app: tor-proxy
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: tor-proxy
+  template:
+    metadata:
+      labels:
+        app: tor-proxy
+    spec:
+      containers:
+      - name: tor-proxy
+        image: dperson/torproxy
+        ports:
+        - containerPort: 8118
