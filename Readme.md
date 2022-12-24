@@ -4,6 +4,19 @@
 https://hub.docker.com/r/dperson/torproxy
 
 ## Параметры Тор:
+Установим обновление ip адреса - кажую минуту с проверкой текущего времени каждые 15 секунд:
+```
+	TOR_MaxCircuitDirtiness=60
+	TOR_NewCircuitPeriod=15
+```
+Указываем вручную мостовые узлы, чтобы без проблем подсоединиться к сети:
+```
+	TOR_UseBridges=1
+	TOR_bridge=135.23.182.26:11393
+	TOR_bridge=23.123.207.136:443
+```
+
+Все параметры Тор:
 ```
 	https://2019.www.torproject.org/docs/tor-manual.html.en
 ```
@@ -17,7 +30,7 @@ https://hub.docker.com/r/dperson/torproxy
 	https://bridges.torproject.org/options/
 ```
 
-```environments
+```
 	TOR_UseBridges=1
 	TOR_bridge=135.23.182.26:11393
 	TOR_bridge=23.123.207.136:443
