@@ -1,2 +1,5 @@
 TOR_MaxCircuitDirtiness=60
 TOR_NewCircuitPeriod=15
+TOR_UseBridges=1
+TOR_bridge=135.23.182.26:11393
+TOR_bridge=23.123.207.136:443
